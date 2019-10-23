@@ -135,7 +135,9 @@ a {
 section {
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
+  align-items: center;
+  margin: auto;
+  padding-top: 80px;
 }
 
 .biography {
@@ -143,13 +145,10 @@ section {
 }
 
 .title {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
   display: flex;
   font-family: "Titan One", sans-serif;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: 500;
   flex-flow: row wrap;
   align-content: center;
@@ -164,17 +163,22 @@ section {
 }
 
 aside {
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-top: 120px;
-  margin-bottom: 30px;
+  padding: 40px 10px;
   width: 350px;
-  background-color: gray;
   border-radius: 10px;
-  box-shadow: 0px 2px 2px black;
+  box-shadow: 0px 0px 15px black;
 }
+
+aside h1 {
+  font-family: "Titan One", sans-serif;
+  font-size: 40px;
+}
+
 figure {
   margin-top: 50px;
   box-shadow: 0px 3px 3px black;
@@ -197,7 +201,8 @@ td {
 
 /* DISCOGRAPHY */
 .discography {
-  padding-top: 50px;
+  perspective: 2000px;
+  padding-top: 80px;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -210,6 +215,10 @@ td {
 }
 
 .album {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 25px;
   position: absolute;
   height: 350px;
   width: 350px;
@@ -217,9 +226,6 @@ td {
   border-radius: 3px;
   backface-visibility: hidden;
   transition: 3s;
-  justify-content: center;
-  text-align: center;
-  font-family: "Gill Sans";
   font-weight: bold;
   font-size: 1.1em;
   color: white;
