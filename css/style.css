@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Titan+One);
+
+@keyframes apparition {
+  100% {
+    transform: translateY(-120px);
+  }
+}
+
+@keyframes slide {
+  20% {
+    transform: translateX(-1000px);
+  }
+  40% {
+    transform: translateX(-2000px);
+  }
+  60% {
+    transform: translateX(-3000px);
+  }
+  80% {
+    transform: translateX(-4000px);
+  }
+  100% {
+    transform: translateX(-5000px);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../pictures/fender.jpg);
+  background-repeat: no-repeat;
+  margin: auto;
+  max-width: 100%;
+  height: 3000px;
+  margin: 0px;
+  font-family: "Vollkorn", sans-serif;
+}
+
+/* HEADER */
+header {
+  background-image: url(../pictures/head1.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.95;
+  font-family: "Satisfy", sans-serif;
+  font-size: 1.2em;
+  height: 175px;
+  box-shadow: 0px 2px 2px black;
+}
+
+.menu {
+  background-color: black;
+  opacity: 1;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  color: white;
+}
+
+.menu li {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.submenu {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.menu li ul li a {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 250px;
+  border-radius: 3px;
+}
+
+.menu li:hover ul li a {
+  visibility: visible;
+}
+
+.menu li span:hover {
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+
+.menu li ul li:hover {
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*SLIDESHOW*/
+
+.slideshow {
+  display: none;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0px 5px 5px #506166;
+  border-radius: 5px;
+  height: 550px;
+  width: 1000px;
+}
+
+.pictures {
+  display: flex;
+  position: absolute;
+  margin-top: 0px;
+  left: 0px;
+  padding-left: 0px;
+}
+.pictures li {
+  display: inline;
+  padding: 0;
+}
+
+.pictures {
+  animation: slide 40s infinite forwards alternate;
+}
+
+/*SECTION 1*/
+
+section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.biography {
+  width: 800px;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: "Titan One", sans-serif;
+  font-size: 90px;
+  font-weight: 500;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.text_bio {
+  font-size: 1.3em;
+  line-height: 160%;
+  text-shadow: 3px 3px 6px white;
+  text-align: justify;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  width: 350px;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px black;
+}
+figure {
+  margin-top: 50px;
+  box-shadow: 0px 3px 3px black;
+}
+.woodstock {
+  max-width: 100%;
+}
+table {
+  margin-top: 40px;
+  width: 300px;
+  text-align: center;
+}
+td {
+  padding: 15px 15px 0px 30px;
+}
+.left {
+  font-family: "Titan One";
+  font-size: 1.3em;
+}
+
+/* DISCOGRAPHY */
+.discography {
+  padding-top: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.discography div {
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+}
+
+.album {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  box-shadow: 0px 0px 15px black;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  transition: 3s;
+  justify-content: center;
+  text-align: center;
+  font-family: "Gill Sans";
+  font-weight: bold;
+  font-size: 1.1em;
+  color: white;
+}
+
+.devant {
+  z-index: 100;
+}
+
+.arriere {
+  background-color: black;
+  opacity: 0.7;
+  z-index: 50;
+  transform: rotateY(-180deg);
+}
+
+.experienced:hover .devant {
+  transform: rotateY(180deg);
+}
+
+.experienced:hover .arriere {
+  transform: rotateY(0deg);
+}
+
+.axis:hover .devant {
+  transform: rotateY(180deg);
+}
+
+.axis:hover .arriere {
+  transform: rotateY(0deg);
+}
+
+.electric:hover .devant {
+  transform: rotateY(180deg);
+}
+
+.electric:hover .arriere {
+  transform: rotateY(0deg);
+}
