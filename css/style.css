@@ -34,9 +34,9 @@ body {
   background-image: url(../pictures/fender.jpg);
   background-repeat: no-repeat;
   margin: auto;
+  text-align: center;
   max-width: 100%;
   height: 3000px;
-  margin: 0px;
   font-family: "Vollkorn", sans-serif;
 }
 
@@ -45,7 +45,7 @@ header {
   background-image: url(../pictures/head1.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
-  opacity: 0.95;
+  opacity: 0.9;
   font-family: "Satisfy", sans-serif;
   font-size: 1.2em;
   height: 175px;
@@ -104,10 +104,10 @@ a {
 /*SLIDESHOW*/
 
 .slideshow {
-  display: none;
   position: relative;
   margin: auto;
   overflow: hidden;
+  padding-top: 0px;
   box-shadow: 0px 5px 5px #506166;
   border-radius: 5px;
   height: 550px;
@@ -117,9 +117,8 @@ a {
 .pictures {
   display: flex;
   position: absolute;
-  margin-top: 0px;
+
   left: 0px;
-  padding-left: 0px;
 }
 .pictures li {
   display: inline;
@@ -144,15 +143,16 @@ section {
   width: 800px;
 }
 
-.title {
-  margin-bottom: 20px;
-  display: flex;
+h1 {
+  margin: 80px 40px 40px 40px;
   font-family: "Titan One", sans-serif;
   font-size: 60px;
   font-weight: 500;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
+}
+
+h3 {
+  font-family: "Titan One", sans-serif;
+  font-size: 20px;
 }
 
 .text_bio {
@@ -163,31 +163,36 @@ section {
 }
 
 aside {
-  height: 90%;
+  background-image: radial-gradient(
+    farthest-corner ellipse at center,
+    white,
+    #1c566d
+  );
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 40px 10px;
+  padding: 20px 10px;
   width: 350px;
   border-radius: 10px;
   box-shadow: 0px 0px 15px black;
 }
 
 aside h1 {
+  margin-top: 30px;
   font-family: "Titan One", sans-serif;
   font-size: 40px;
 }
 
 figure {
-  margin-top: 50px;
+  margin-top: 30px;
   box-shadow: 0px 3px 3px black;
 }
 .woodstock {
   max-width: 100%;
 }
 table {
-  margin-top: 40px;
+  margin-top: 30px;
   width: 300px;
   text-align: center;
 }
@@ -200,12 +205,22 @@ td {
 }
 
 /* DISCOGRAPHY */
+
+#disco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .discography {
   perspective: 2000px;
-  padding-top: 80px;
-  margin: auto;
+  max-width: 100%;
+  height: 850px;
+  padding: 40px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .discography div {
@@ -215,10 +230,6 @@ td {
 }
 
 .album {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 25px;
   position: absolute;
   height: 350px;
   width: 350px;
@@ -226,9 +237,6 @@ td {
   border-radius: 3px;
   backface-visibility: hidden;
   transition: 3s;
-  font-weight: bold;
-  font-size: 1.1em;
-  color: white;
 }
 
 .devant {
@@ -236,8 +244,6 @@ td {
 }
 
 .arriere {
-  background-color: black;
-  opacity: 0.7;
   z-index: 50;
   transform: rotateY(-180deg);
 }
@@ -263,5 +269,21 @@ td {
 }
 
 .electric:hover .arriere {
+  transform: rotateY(0deg);
+}
+
+.gypsys:hover .devant {
+  transform: rotateY(180deg);
+}
+
+.gypsys:hover .arriere {
+  transform: rotateY(0deg);
+}
+
+.monterey:hover .devant {
+  transform: rotateY(180deg);
+}
+
+.monterey:hover .arriere {
   transform: rotateY(0deg);
 }
