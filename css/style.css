@@ -36,7 +36,7 @@ body {
   margin: auto;
   text-align: center;
   max-width: 100%;
-  height: 3000px;
+  height: 3200px;
   font-family: "Vollkorn", sans-serif;
 }
 
@@ -46,16 +46,16 @@ header {
   background-repeat: no-repeat;
   background-position: bottom;
   opacity: 0.9;
-  font-family: "Satisfy", sans-serif;
+  font-family: "Titan One";
   font-size: 1.2em;
-  height: 175px;
+  height: 180px;
   box-shadow: 0px 2px 2px black;
 }
 
 .menu {
   background-color: black;
   opacity: 1;
-  height: 40px;
+  height: 45px;
   display: flex;
   justify-content: flex-end;
   list-style: none;
@@ -66,7 +66,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 250px;
-  line-height: 40px;
+  line-height: 45px;
   text-align: center;
   cursor: pointer;
 }
@@ -148,11 +148,25 @@ h1 {
   font-family: "Titan One", sans-serif;
   font-size: 60px;
   font-weight: 500;
+  color: rgba(255, 255, 0, 0.762);
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: red;
+  text-shadow: 6px 0px 10px rgba(147, 68, 147, 0.92),
+    -6px 0px 10px rgba(147, 68, 147, 0.92),
+    0px 6px 10px rgba(147, 68, 147, 0.92),
+    0px -6px 10px rgba(147, 68, 147, 0.92);
 }
 
-h3 {
+aside h1 {
+  font-size: 40px;
+  margin-top: 40px;
+}
+h2 {
   font-family: "Titan One", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
+  color: white;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .text_bio {
@@ -168,6 +182,7 @@ aside {
     white,
     #1c566d
   );
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,12 +191,6 @@ aside {
   width: 350px;
   border-radius: 10px;
   box-shadow: 0px 0px 15px black;
-}
-
-aside h1 {
-  margin-top: 30px;
-  font-family: "Titan One", sans-serif;
-  font-size: 40px;
 }
 
 figure {
@@ -210,13 +219,14 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 60px;
 }
 
 .discography {
   perspective: 2000px;
   max-width: 100%;
-  height: 850px;
-  padding: 40px;
+  height: 950px;
+  padding: 60px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -228,7 +238,9 @@ td {
   width: 350px;
   overflow: hidden;
 }
-
+.discography div h2 {
+  margin-bottom: 20px;
+}
 .album {
   position: absolute;
   height: 350px;
