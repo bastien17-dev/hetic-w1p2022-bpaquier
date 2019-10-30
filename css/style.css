@@ -34,7 +34,7 @@ body {
   background-color: rgb(230, 230, 230);
   background-image: url(../pictures/fender.png);
   background-repeat: no-repeat;
-  background-position-x: 100%;
+  background-position: center;
   margin: auto;
   max-width: 100%;
   height: 3150px;
@@ -46,7 +46,7 @@ header {
   height: 220px;
   background-image: url(../pictures/head1.jpg);
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: bottom left;
   font-family: "Titan One";
   font-size: 1.2em;
   box-shadow: 0px 2px 2px black;
@@ -58,12 +58,11 @@ nav {
   z-index: 3;
 }
 .menu {
-  /*background-color: rgba(206, 135, 51);*/
   background-color: #063147;
   opacity: 1;
   height: 45px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   list-style: none;
   color: white;
 }
@@ -187,35 +186,48 @@ td {
 /* DISCOGRAPHY */
 
 #disco {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 60px;
+  margin-top: 40px;
+  width: 100%;
+  height: 1000px;
+  padding: 0px 50px;
+  display: grid;
+  grid-template-columns: 370px 370px 370px;
+  grid-template-rows: 60px 1fr 1fr;
+  grid-template-areas:
+    "h h h"
+    "exp axi ele"
+    "gyp mont bot";
 }
-
-.discography {
-  perspective: 5000px;
-  max-width: 100%;
-  height: 950px;
-  padding: 60px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-
-.discography div {
+#disco div {
   height: 350px;
-  width: 350px;
-  overflow: hidden;
 }
-.discography div h2 {
-  margin-bottom: 20px;
+.title_disco {
+  grid-area: h;
+  text-align: center;
+}
+.experienced {
+  grid-area: exp;
+}
+.axis {
+  grid-area: axi;
+}
+.electric {
+  grid-area: ele;
+}
+.gypsys {
+  grid-area: gyp;
+}
+.monterey {
+  grid-area: mont;
+}
+.both {
+  grid-area: bot;
 }
 .album {
   position: absolute;
   height: 350px;
   width: 350px;
+  margin-top: 10px;
   box-shadow: 0px 0px 15px black;
   border-radius: 3px;
   backface-visibility: hidden;
@@ -271,10 +283,19 @@ td {
   transform: rotateY(0deg);
 }
 
-/*SLIDESHOW*/
+.both:hover .devant {
+  transform: rotateY(180deg);
+}
 
-#pics {
-  text-align: center;
+.both:hover .arriere {
+  transform: rotateY(0deg);
+}
+
+/*SLIDESHOW*/
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slideshow {
@@ -300,4 +321,8 @@ td {
 
 .pictures {
   animation: slide 40s infinite forwards alternate;
+}
+
+.galerie {
+  display: none;
 }

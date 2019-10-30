@@ -1,0 +1,54 @@
+.menu li {
+  width: 155px;
+}
+
+.menu li ul li a {
+  width: 155px;
+}
+
+.biography {
+  width: 100%;
+  padding: 0px 40px;
+}
+
+aside {
+  display: none;
+}
+
+#disco {
+  height: 1500px;
+  grid-template-columns: 370px 370px;
+  grid-template-rows: 60px 1fr 1fr 1fr;
+  grid-template-areas:
+    "h h"
+    "exp axi"
+    "ele gyp"
+    "mont bot";
+}
+.slide {
+  display: none;
+}
+
+.galerie {
+  padding: 0px 50px;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 320px 320px;
+  grid-auto-rows: repeat (4, 180px);
+  grid-row-gap: 70px;
+  grid-column-gap: 30px;
+}
+
+.galerie h1 {
+  grid-column: 1 / span 2;
+}
+
+.galerie a img {
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px black;
+}
+
+.galerie a:hover img {
+  height: 170px;
+  width: 305px;
+}
